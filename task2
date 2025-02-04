@@ -1,0 +1,21 @@
+
+<html >
+<head>
+</head>
+<body>
+    <button id="1">sum from 0 to 100</button>
+    <p id="result"></p>
+
+    <script>
+        document.getElementById("1").addEventListener("click", function() {
+            let array = [];
+            let sum = 0;
+            for (let i = 0; i <= 100; i++) {
+                array.push(i);
+                sum += i;
+            }
+            document.getElementById("result").textContent = "the sum is : " + sum;
+        });
+    </script>
+</body>
+</html>
