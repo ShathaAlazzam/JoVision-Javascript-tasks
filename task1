@@ -1,0 +1,15 @@
+<html >
+<head>
+    
+     <title>Button Click</title>
+</head>
+<body>
+    <button id="1">Click me</button>
+
+    <script>
+        document.getElementById("1").addEventListener("click", function() {
+            console.log("Hello World");
+        });
+    </script>
+</body>
+</html>
