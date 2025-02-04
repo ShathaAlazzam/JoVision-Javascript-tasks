@@ -1,0 +1,21 @@
+<html >
+<head>
+</head>
+<body>
+    <button id="1"> even sum </button>
+    <p id="result"></p>
+
+    <script>
+        document.getElementById("1").addEventListener("click", function() {
+            let array = [];
+            let sum = 0;
+            for (let i = 0; i <= 100; i++) {
+			if (i%2==0){
+               array.push(i); 
+                sum += i;}
+            }
+            document.getElementById("result").textContent = "the sum of even numbers between 0 and 100 is : " + sum;
+        });
+    </script>
+</body>
+</html>
