@@ -1,0 +1,39 @@
+<html >
+<head>
+    
+    <style>
+        body {
+		    background-color: #d2b9d3;
+        }
+        #css {
+		    background: #fffafa;
+            font-size: 100px;
+			border-radius: 8px;
+            padding: 15px;
+        }
+		div{
+		    background: #fffafa;
+            font-size: 50px;
+			border-radius: 8px;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div>Hours:Minutes:Seconds<br></div>
+    <div id="css">Hours:Minutes:Seconds<br></div>
+    
+    <script>
+        function currentTime() {
+            const now = new Date();
+            const h = String(now.getHours()).padStart(2, '0');
+            const min = String(now.getMinutes()).padStart(2, '0');
+            const sec = String(now.getSeconds()).padStart(2, '0');
+            document.getElementById('css').textContent = `${h} : ${min} : ${sec}`;
+        }
+        currentTime();
+        setInterval(currentTime, 1000);
+       
+    </script>
+</body>
+</html>
