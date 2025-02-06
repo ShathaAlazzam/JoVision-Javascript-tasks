@@ -1,0 +1,74 @@
+<html >
+<head>
+ <style>
+        body {
+		 background-color: #fffafa;
+        }
+        button {
+            margin: 5px;
+            padding: 20px ;
+            background-color: #d2b9d3;
+            color: #fffafa;
+            border-radius: 8px;
+        }
+        button:hover {
+            background-color: #c6aec7;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="removeMultiplesOfThree()">Remove Multiples of 3</button>
+    <button onclick="addRangeToArray()">Add the range (100-150) to the array</button>
+    <button onclick="increaseEachByThree()">Add 3 to Each</button>
+    <button onclick="printRange()">Print Index from 20 to 40</button>
+    <button onclick="randomizeAndSort()">Randomize And Sort</button>
+    
+    <script>
+      function Array(a, b) {
+	  let arr=[];
+	  for(var i=a ; i< b+1 ; i++){
+	  arr.push(i);}
+	  return arr;
+	  }
+       
+        function removeMultiplesOfThree() {
+            let array = [];
+			for (var i=0 ; i<101;i++){
+			if(i%3!=0){array.push(i);}
+			}
+            console.log(array); }
+        
+        function addRangeToArray() {
+            let array = Array(0,100);
+            array.push(Array(101,150));
+            console.log(array);
+        }
+        
+        function increaseEachByThree() {
+            let array = Array(0, 100);
+			for(var i =0 ; i< array.length;i++)
+			{
+			array[i]=array[i]+3;
+			}
+            console.log(array); }
+        
+        function printRange() {
+            let array = Array(0, 100);
+			let array2 =array.slice(20, 41);
+            console.log(array2);}
+        
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                let j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];}
+        }
+        
+        function randomizeAndSort() {
+            let array = Array(0, 100);
+            shuffleArray(array);
+              console.log("Array After Shuffling :", array);
+            array.sort((a, b) => b - a);
+              console.log("Array After Sorting :", array);}
+    </script>
+</body>
+</html>
